@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    background: green;
+    background: #8e8610;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #190A05, green);
+    background: -webkit-linear-gradient(to right, #4b4b16, #8e8610);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #190A05, green);
+    background: linear-gradient(to right, #4b4b16, #8e8610);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
