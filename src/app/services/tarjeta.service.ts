@@ -76,7 +76,7 @@ export class TarjetaService {
   async obtenerTarjetas(): Promise<any> {
     // return this.firestore.collection('tarjetas', ref => ref.orderBy('fechaCreacion', 'asc')).snapshotChanges();
     const data: TarjetaCredito[] = [];
-    const queryData = await getDocs(query(this.dbRef));
+    const queryData = await getDocs(query(this.dbRef, orderBy('fechaCreacion', 'desc')));
     queryData.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
       const tarjetaDoc = this.tarjetaConverter.fromFirestore(doc, {});
       data.push(tarjetaDoc);

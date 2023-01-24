@@ -22,6 +22,7 @@ export class CrearTarjetaComponent implements OnInit {
       titular: ['', Validators.required],
       numeroTarjeta: ['', [Validators.required, Validators.minLength(16), Validators.maxLength(16)]],
       fechaExpiracion: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(5)]],
+      fechaCreacion: [''],
       cvv: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
     })
    }
@@ -34,6 +35,7 @@ export class CrearTarjetaComponent implements OnInit {
         titular: data.titular,
         numeroTarjeta: data.numeroTarjeta,
         fechaExpiracion: data.fechaExpiracion,
+        fechaCreacion: data.fechaCreacion,
         cvv: data.cvv,
       })
     })
@@ -58,6 +60,7 @@ export class CrearTarjetaComponent implements OnInit {
       titular: this.form.value.titular,
       numeroTarjeta: this.form.value.numeroTarjeta,
       fechaExpiracion: this.form.value.fechaExpiracion,
+      fechaCreacion: this.form.value.fechaCreacion,
       cvv: this.form.value.cvv,
       fechaActualizacion: new Date(),
     }
