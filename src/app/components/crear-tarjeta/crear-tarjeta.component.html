@@ -2,7 +2,7 @@
     <div class="card-body">
         <h5 class="titulo mb-3">{{ titulo | uppercase }}
             <div *ngIf="loading" class="spinner-border float-end" role="status">
-                <span class="visually-hidden">Este cambio no se debe aplicar</span>
+                <span class="visually-hidden">Cargando...</span>
             </div>
         </h5>
         <form [formGroup]="form" (ngSubmit)="guardarTarjeta()">
