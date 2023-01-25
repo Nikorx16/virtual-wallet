@@ -43,6 +43,7 @@ export class CrearTarjetaComponent implements OnInit {
         "",
         [Validators.required, Validators.minLength(3), Validators.maxLength(3)],
       ],
+      fechaCreacion: [""],
     });
   }
 
@@ -57,6 +58,7 @@ export class CrearTarjetaComponent implements OnInit {
         fechaExpiracion: data.fechaExpiracion,
         fechaCreacion: data.fechaCreacion,
         cvv: data.cvv,
+        fechaCreacion: data.fechaCreacion,
       });
     });
   }
@@ -80,6 +82,7 @@ export class CrearTarjetaComponent implements OnInit {
       fechaCreacion: this.form.value.fechaCreacion,
       cvv: this.form.value.cvv,
       fechaActualizacion: new Date(),
+      fechaCreacion: this.form.value.fechaCreacion,
     };
     this.loading = true;
     this._tarjetaService.editarTarjeta(id, TARJETA).then(
